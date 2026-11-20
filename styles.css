@@ -1,0 +1,102 @@
+:root{
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --muted: #64748b;
+    --accent: #2563eb;
+    --text: #0f172a;
+    --soft: #eef2ff;
+  }
+  
+  *{box-sizing:border-box}
+  body{
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:var(--bg);
+    color:var(--text);
+    padding:20px;
+    margin:0;
+  }
+  
+  .card{
+    background:var(--card);
+    border-radius:12px;
+    padding:18px;
+    box-shadow:0 6px 18px rgba(15,23,42,0.06);
+    max-width:980px;
+    margin:0 auto;
+  }
+  
+  h1{margin:0 0 6px;font-size:20px}
+  .muted{color:var(--muted);margin-bottom:12px}
+  .small{font-size:12px}
+  .row{display:flex;gap:12px;align-items:center;margin:8px 0}
+  input[type=text], textarea{
+    width:100%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #e6eef6;
+    resize:vertical;
+    font-size:14px;
+    background:#fff;
+  }
+  textarea{min-height:90px}
+  button{
+    background:var(--accent);
+    color:white;
+    padding:10px 14px;
+    border-radius:8px;
+    border:0;
+    cursor:pointer;
+    font-weight:600;
+  }
+  button.ghost{
+    background:transparent;
+    border:1px solid #cbd5e1;
+    color:var(--text);
+  }
+  .list{margin:8px 0 12px}
+  .seller{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px;
+    border-radius:8px;
+    border:1px solid #f1f5f9;
+    margin-bottom:8px;
+    background:#fff;
+  }
+  .badge{
+    background:var(--soft);
+    color:#3730a3;
+    padding:6px 8px;
+    border-radius:999px;
+    font-weight:600;
+    font-size:12px;
+  }
+  .log{
+    font-family:monospace;
+    white-space:pre-wrap;
+    background:#0f172a;
+    color:#e6eef6;
+    padding:10px;
+    border-radius:8px;
+    height:140px;
+    overflow:auto;
+  }
+  .modal{
+    position:fixed;
+    inset:0;
+    background:rgba(2,6,23,0.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:40;
+  }
+  .modal-card{
+    background:var(--card);
+    padding:16px;
+    border-radius:10px;
+    width:480px;
+    box-shadow:0 10px 30px rgba(2,6,23,0.2);
+  }
+  hr{border:0;border-top:1px solid #eef2ff;margin:12px 0}
+  

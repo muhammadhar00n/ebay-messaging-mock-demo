@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>eBay Bulk Messaging — Mock Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>eBay Bulk Messaging — Mock Demo</h1>
+    <div class="muted">This is a <strong>mock demo</strong>. It simulates extracting sellers from a listings page and the semi-automatic / automatic send flows — it will not contact eBay.</div>
+
+    <label><strong>Step 1 — Paste your listings page URL (or use sample)</strong></label>
+    <div class="row">
+      <input id="urlInput" type="text" placeholder="https://www.ebay.com/itm/.... or paste a saved page URL" value="sample://listings-page">
+    </div>
+
+    <label><strong>Step 2 — (Optional) Paste raw HTML of the listings page</strong></label>
+    <div class="muted small">If you have a saved page, paste it here. Otherwise the demo uses an embedded sample page.</div>
+    <textarea id="rawHtml" placeholder="Paste saved listings page HTML here (optional)"></textarea>
+
+    <div class="row">
+      <button id="scanBtn">Scan page and extract sellers</button>
+      <button class="ghost" id="loadSample">Load sample page (demo)</button>
+      <div style="margin-left:auto;"><span class="badge" id="countBadge">0 sellers</span></div>
+    </div>
+
+    <hr/>
+
+    <label><strong>Extracted sellers</strong></label>
+    <div id="sellersList" class="list"></div>
+
+    <label><strong>Message template</strong></label>
+    <textarea id="template">Hi {{seller}}, I’m interested in your listing. Is this item still available? Thanks — {{yourName}}</textarea>
+
+    <div class="row">
+      <input id="yourName" type="text" placeholder="Your name" value="Ali" />
+      <button id="queueBtn">Queue sellers for semi-auto send</button>
+      <button id="autoBtn">Simulate Auto-send (demo)</button>
+      <button class="ghost" id="clearLog">Clear log</button>
+    </div>
+
+    <h3>Queue</h3>
+    <div id="queueArea" class="list"></div>
+
+    <h3>Activity log</h3>
+    <div class="log" id="logArea">Demo started — no messages sent yet.</div>
+  </div>
+
+  <div id="modalRoot" style="display:none;"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
